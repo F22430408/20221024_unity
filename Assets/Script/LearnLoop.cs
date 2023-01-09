@@ -7,6 +7,8 @@ namespace Tom
 	/// </summary>
 	public class LearnLoop : MonoBehaviour
 	{
+		public string[] players = { "小智", "小剛", "小霞", "小光", "皮卡丘" };
+		
 		private void Awake()
 		{
 
@@ -18,7 +20,18 @@ namespace Tom
 				print($"<color=#119933>while 迴圈: {number}</color>");
 				number++;
 			}
+			//      初始值;布林值 迴圈結束會執行的程式
+			for (int i =0; i < 5; i++)
+			{
+				print($"<color=#ff3333for 迴圈: { i } </color>");
+			}
+
+			for (int i = 0; i < players.Length; i++)
+			{
+				print($"<color=#3333ff>玩家名稱 : { players[i] } </color>");
+			}
 		}
+
 	}
 }
 
