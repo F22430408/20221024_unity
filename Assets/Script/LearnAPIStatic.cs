@@ -37,5 +37,31 @@ namespace TOM
 			print($"<color=yellow>隨機值介於 100 與 200 :{random}</color>");
 
 		}
+		private void Start()
+		{
+			print($"<color=#3355ff>攝影機總數： { Camera.allCamerasCount } </color>");
+			print($"<color=#3355ff>圓周率： { Mathf.PI } </color>");
+
+
+			Physics.gravity = new Vector3(0, 10, 0);
+			print($"<color=#5533ff>地心引力： { Physics.gravity } </color>");
+
+			Time.timeScale = 5;
+			print($"<color=#5533ff>螢幕亮度： { Time.timeScale } </color>");
+
+			Screen.brightness = 0.3f;
+			print($"<color=#5533ff>螢幕亮度： { Screen.brightness } </color>");
+
+			print($"<color=#5533ff>去小數點： { Mathf.Floor(9.99f) } </color>");
+			Application.OpenURL("https://unity.com/");
+		}
+
+		private void Update()
+		{
+			//print($"<color=yellow>經過時間： { Time.time } </color>");
+			bool space = Input.GetKey(KeyCode.Space);
+			print($"<color=#5533ff>是否按下空白鍵： { space } </color>");
+		}
 	}
 }
+
